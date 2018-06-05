@@ -4,13 +4,8 @@
   "license": "MIT",
   "main": "app.js",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --prod",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "postinstall": "grunt sass: production && ng build --aot --prod"
+    "postinstall": "ng build --aot -prod",
+    "start": "node app.js"
   },
   "engines": {
     "node": "9.3.0",
