@@ -1,0 +1,45 @@
+<br />
+<br />
+<br />
+<br />
+<div class="container">
+
+    <form [formGroup]="contactForm">
+
+    <h5 class="h5 text-center mb-4">Get in touch with us </h5>
+
+    <div class="md-form">
+        <i class="fa fa-user prefix grey-text"></i>
+        <input type="text" id="form3" class="form-control" mdbActive formControlName="con_name">
+        <label for="form3">Your name</label>
+    </div>
+
+    <div class="md-form">
+        <i class="fa fa-envelope prefix grey-text"></i>
+        <input type="text" id="form2" class="form-control" mdbActive formControlName="con_email">
+        <label for="form2">Your email</label>
+    </div>
+
+    <div class="md-form">
+        <i class="fa fa-tag prefix grey-text"></i>
+        <input type="text" id="form32" class="form-control" mdbActive formControlName="con_subject">
+        <label for="form34">Subject</label>
+    </div>
+
+    <div class="md-form">
+        <i class="fa fa-pencil prefix grey-text"></i>
+        <textarea type="text" id="form8" class="md-textarea" style="height: 100px" mdbActive formControlName="con_message">
+        </textarea>
+        <label for="form8">Your message</label>
+    </div>
+
+    <div class="text-center">
+        <button class="btn btn-yellow btn-lg waves-light" mdbRippleRadius>Send <i class="fa fa-paper-plane-o ml-1"></i></button>
+    </div>
+
+</form>
+
+
+</div>
+<br />
+<footer-component></footer-component>

@@ -1,0 +1,27 @@
+<div class="container-fluid" id="tour">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8" style="padding-top: 200px;">
+            <div class="ui inverted large pointing menu">
+              <a class="item" routerLink="/plan/flight" routerLinkActive="active">
+                Flights
+              </a>
+              <a class="item" routerLink="/plan/hotel" routerLinkActive="active">
+                Hotels
+              </a>
+              <a class="item" routerLink="/plan/cars" routerLinkActive="active">
+                Cars
+              </a>
+              <a class="item">
+                Air Transfers
+              </a>
+            </div>
+            
+            <div class="ui segment">
+                
+              <router-outlet></router-outlet>
+            </div>
+                
+        </div>
+    </div>
+</div>

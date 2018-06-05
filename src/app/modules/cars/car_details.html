@@ -1,0 +1,112 @@
+<div class="container-full" style="background-color: #FFD600;">
+  <div class="row">
+    <div class="col-md-4 col-sm-12" style="padding: 50px;">
+      <h2 class="text-left" style="text-decoration: underline"> Car Details</h2>
+      <p style="font-size: 18px;">Capacity: {{ car.capacity }}</p>
+      <p style="font-size: 18px;">Fuel    : {{ car.fuel }}</p>
+      <p style="font-size: 18px;">Engine  : {{ car.engine }}</p>
+      <p style="font-size: 18px;">Steering: {{ car.steering }}</p>
+      <p style="font-size: 18px;">Drive   :  {{ car.drive }}</p>
+    </div>
+    <div class="col-md-8 col-sm-12">
+      <img src="{{ car.photo }}" style="width: 100%; height: 100%;"/>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<div class="container">
+
+        <form [formGroup]="rentalForm" novalidate (ngSubmit)="onSubmit()" name="rentalForm">
+
+        <p class="h2 text-center mb-4" style="text-decoration: underline;">rental request form</p>
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+
+          <div class="md-form">
+              <i class="fa fa-user prefix grey-text"></i>
+              <input type="text" name="cname" id="cname" class="form-control"
+               mdbActive formControlName="cname" >
+              <label for="cname">Your name</label>
+          </div>
+
+          <div class="md-form">
+              <i class="fa fa-envelope prefix grey-text"></i>
+              <input type="email" name="mail" id="mail" class="form-control"
+              mdbActive formControlName="mail" >
+              <label for="mail">Your email</label>
+          </div>
+
+          <div class="md-form">
+              <i class="fa fa-mobile-phone prefix grey-text"></i>
+              <input type="number" id="phone" name="phone" class="form-control"
+              mdbActive formControlName="phone" >
+              <label for="phone">Your Mobile no</label>
+          </div>
+
+          <div class="md-form">
+              <i class="fa fa-car prefix grey-text"></i>
+              <input type="text" id="car" name="car" class="form-control"
+                value="{{car.model}}"
+              mdbActive formControlName="car" readonly >
+              <label for="car">Car Model</label>
+          </div>
+
+          <div class="md-form">
+              <i class="fa fa-drivers-license-o prefix grey-text"></i>
+              <input type="text" id="dl" name="dl" class="form-control"
+              mdbActive formControlName="dl" >
+              <label for="dl">Your Driving License</label>
+          </div>
+
+          <div class="md-form">
+              <i class="fa fa-drivers-license-o prefix grey-text"></i>
+              <input type="text" id="id" name="id" class="form-control"
+               mdbActive formControlName="id" >
+              <label for="id">Your National ID/ Passport</label>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+          <br>
+
+          <div class="form-group">
+            <label for="start_date">Rental Start Date</label>
+            <div class="input-group">
+              <input class="form-control" placeholder="yyyy-mm-dd"
+                     name="start_date"  ngbDatepicker #d="ngbDatepicker" formControlName="start_date">
+              <button class="input-group-addon" (click)="d.toggle()" type="button" required>
+                <img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
+              </button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="end">Rental End Date</label>
+            <div class="input-group">
+              <input class="form-control" placeholder="yyyy-mm-dd"
+                     name="end"  ngbDatepicker #d2="ngbDatepicker" formControlName="end">
+              <button class="input-group-addon" (click)="d2.toggle()" type="button">
+                <img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
+              </button>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="text-right">
+
+              <button class="btn btn-dark-green waves-light btn-lg"
+               type="submit" [disabled]="!rentalForm.valid"
+               mdbRippleRadius>Send Request <i class="fa fa-paper-plane-o ml-1"></i></button>
+
+               
+          </div>
+        </div>
+      </div>
+      </form>
+
+</div>
+<br>
+<br>
+<br>
+<footer-component></footer-component>

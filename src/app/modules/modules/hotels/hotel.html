@@ -1,0 +1,40 @@
+<form class="ui form" >
+    <div class="three fields">
+        <div class="field">
+            <div class="ui left icon input">
+                <i class="bed icon"></i>
+                <input type="text" placeholder="Select city, Locatio of Hotel Name">
+            </div>
+        </div>
+        
+        <div class="field">
+          <div class="ui left icon input">
+                <i class="calendar icon"></i>
+                <input suiDatepicker
+                       name="start_date"
+                       [(ngModel)]="stat_date"
+                       [pickerMode]="mode"
+                       [pickerFirstDayOfWeek]="firstDayOfWeek"
+                       [pickerUseNativeOnMobile]="false"
+                       placeholder="Checkin Date">
+            </div>
+        </div>
+
+        <div class="field">
+          <div class="ui left icon input">
+                <i class="calendar icon"></i>
+                <input suiDatepicker
+                       name="end_date"
+                       [(ngModel)]="end_date"
+                       [pickerMode]="mode"
+                       [pickerFirstDayOfWeek]="firstDayOfWeek"
+                       [pickerUseNativeOnMobile]="false"
+                       placeholder="Checkout Date">
+                </div>
+        </div>
+        <button class="huge ui green button">
+            search
+        </button>
+  </div>
+    
+</form>

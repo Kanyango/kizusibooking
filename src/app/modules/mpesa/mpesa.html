@@ -1,0 +1,59 @@
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+
+      <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Rental Cost Calculator</h3>
+                <hr>
+                <h4> {{ car.model }}</h4>
+                <br>
+                <form [formGroup]="mpesaForm" novalidate (ngSubmit)="onSubmit()" name="mpesaForm">
+                  <div class="md-form">
+                      <i class="fa fa-calendar prefix grey-text"></i>
+                      <input type="text" id="days" name="days" class="form-control"
+                      mdbActive formControlName="days" >
+                      <label for="days">Days</label>
+                  </div>
+
+                <div class="form-group">
+                  <label for="locate">Region</label>
+                  <select class="form-control" formControlName="locate">
+                    <option *ngFor="let one of car.pricing" value="{{ one.amount}}">
+                      {{ one.desc }}
+                    </option>
+                  </select>
+                </div>
+
+                <br>
+                <button [disabled]="!mpesaForm.valid" type="submit"
+                 class="btn btn-success waves-light" mdbRippleRadius>calculate</button>
+          </form>
+          <br>
+          <h3>Total cost: <strong>{{ totals | currency:'Ksh' }}</strong></h3>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Mpesa Procedure</h3>
+            <hr>
+            <p style="font-size: 18px;">1.Go to M-pesa Menu</p>
+      			<p style="font-size: 18px;">2.Go to Lipa na M-pesa</p>
+      			<p style="font-size: 18px;">3.Go to Buy Goods and Services</p>
+      			<p style="font-size: 18px;">4.Enter 507187 as the till number</p>
+      			<p style="font-size: 18px;">5.Enter <strong> {{ totals }} </strong>in amount</p>
+      			<p style="font-size: 18px;">6.Enter your M-pesa PIN</p>
+      			<p style="font-size: 18px;">7.Confirm Payment</p>
+          </div>
+        </div>
+      </div>
+
+  </div>
+</div>
+<br>
+<br>

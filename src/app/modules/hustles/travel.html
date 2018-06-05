@@ -1,0 +1,28 @@
+<button type="button" class="btn btn-primary waves-light" data-toggle="modal" data-target="#basicExample" (click)="side.show()" mdbRippleRadius>
+    Travel Bookings
+</button>
+
+<div mdbModal #side="mdb-modal" class="modal fade right" id="centralModalSm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-right modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title w-100" id="myModalLabel">Travel Bookings</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="side.hide()">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="/../../../assets/travel.jpg" style="width: 100%" height="100%"/>
+                <br>
+                <br>
+                <h3>
+                    Travelling is amazing not until the itinrary list hits your face ,
+                    Let us handle the headache as you enjoy your journey</h3>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary waves-light" data-dismiss="modal" (click)="side.hide()" mdbRippleRadius>Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>

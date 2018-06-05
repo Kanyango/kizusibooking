@@ -1,0 +1,102 @@
+/* You can add global styles to this file, and also import other style files */
+
+#tour
+{
+  background-image: url("/assets/tours.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-attachment:scroll;
+
+}
+
+.header-text {
+    position: absolute;
+    top: 45%;
+    left: 1.8%;
+
+    right: auto;
+    width: 96.66666666666666%;
+    color: #fff;
+}
+.header-text h1 {
+    font-size: 80px;
+    letter-spacing: 8px;
+    font-weight: 900;
+}
+
+.header-text h1 span {
+	padding: 10px;
+
+}
+
+.header-text h3 span {
+
+	padding: 30px;
+}
+
+          .ngxcarouselxVhBjq .ngxcarouselPoint {
+            list-style-type: none;
+            text-align: center;
+            padding: 12px;
+            margin: 0;
+            white-space: nowrap;
+            overflow: auto;
+            box-sizing: border-box;
+          }
+          .ngxcarouselxVhBjq .ngxcarouselPoint li {
+            display: inline-block;
+            border-radius: 50%;
+            border: 2px solid rgba(0, 0, 0, 0.55);
+            padding: 4px;
+            margin: 0 3px;
+            transition-timing-function: cubic-bezier(.17, .67, .83, .67);
+            transition: .4s;
+          }
+          .ngxcarouselxVhBjq .ngxcarouselPoint li.active {
+              background: #6b6b6b;
+              transform: scale(1.2);
+          }
+
+agm-map {
+  height: 100%;
+}
+
+#cars {
+  position: relative;
+
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.8;
+  background-color: #FFD600;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+#cars:hover .overlay {
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}

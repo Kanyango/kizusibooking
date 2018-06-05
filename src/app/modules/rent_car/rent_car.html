@@ -1,0 +1,88 @@
+<div class="container-full" style="background-color: #FFD600;">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <img src="/../../../assets/ours.jpg" style="width: 100%; height: 100%;">
+    </div>
+
+    <div class="col-md-6 col-sm-12 text-left">
+      <div style="padding-left: 50px; padding-top: 30px; text-decoration: underline;">
+          <h1 class="text-left">Let your car work 4 u</h1>
+      </div>
+      <br />
+      <br />
+      <p style="font-size: 18px;">
+        This is a platform where car owners get to turn their cars into
+        money making machines , how about that , one word <strong>AMAZING</strong>.
+       </p>
+       <div style="padding-left: 30px; padding-top: 30px;">
+           <h3><span>How it works<p style="font-size: 16px;">As fast as taking a selfie</p></span></h3>
+       </div>
+       <br>
+       <p style="font-size: 18px;">1. &nbsp; Fill the request form below.</p>
+       <p style="font-size: 18px;">2. &nbsp; We will verify the vehicle details with relevant government departments.</p>
+       <p style="font-size: 18px;">3. &nbsp; Invite you to our offices and sign the rental agreement.</p>
+       <p style="font-size: 18px;">4. &nbsp; Finally sit down and watch your car make that money for you.</p>
+    </div>
+    <br>
+    <br>
+  </div>
+</div>
+<br />
+<div class="container">
+
+  <form [formGroup]="rentCarForm" novalidate (ngSubmit)="onSubmit()" name="rentCarForm">
+
+  <p class="h2 text-center mb-4" style="text-decoration: underline;">Issue Car for rental form</p>
+
+  <div class="row">
+      <div class="col-md-12 col-sm-12">
+
+    <div class="md-form">
+        <i class="fa fa-user prefix grey-text"></i>
+        <input type="text" name="cname" id="cname" class="form-control"
+         mdbActive formControlName="cname" >
+        <label for="cname">Your name</label>
+    </div>
+
+    <div class="md-form">
+        <i class="fa fa-envelope prefix grey-text"></i>
+        <input type="email" name="mail" id="mail" class="form-control"
+        mdbActive formControlName="mail" >
+        <label for="mail">Your email</label>
+    </div>
+
+    <div class="md-form">
+        <i class="fa fa-mobile-phone prefix grey-text"></i>
+        <input type="number" id="phone" name="phone" class="form-control"
+        mdbActive formControlName="phone" >
+        <label for="phone">Your Mobile no</label>
+    </div>
+
+
+    <div class="md-form">
+        <i class="fa fa-drivers-license-o prefix grey-text"></i>
+        <input type="text" id="id" name="id" class="form-control"
+         mdbActive formControlName="id" >
+        <label for="id">Your National ID/ Passport</label>
+    </div>
+
+
+
+    <div class="md-form">
+        <i class="fa fa-drivers-license-o prefix grey-text"></i>
+        <input type="text" id="careg" name="careg" class="form-control"
+        mdbActive formControlName="careg" >
+        <label for="dl">Vehicle Registration</label>
+    </div>
+
+
+  <div class="text-left">
+      <button class="btn btn-dark-green waves-light btn-lg"
+       type="submit" [disabled]="!rentCarForm.valid"
+       mdbRippleRadius>Send Request <i class="fa fa-paper-plane-o ml-1"></i></button>
+  </div>
+</div>
+</div>
+</form>
+
+</div>

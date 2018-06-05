@@ -1,0 +1,56 @@
+<form class="ui form" #flight="ngForm">
+    
+   
+        
+            <sui-select class="selection"
+                    [(ngModel)]="selectedOption"
+                    name="name">
+            <sui-select-option *ngFor="let option of trips" [value]="option">
+            </sui-select-option>
+    </sui-select>
+    
+    <sui-select class="selection"
+                    [(ngModel)]="another"
+                    name="name">
+            <sui-select-option *ngFor="let option of trips" [value]="option">
+            </sui-select-option>
+    </sui-select>
+ 
+    
+   
+    <div class="five fields">
+        <div class="field">
+          <input type="text" placeholder="From">
+        </div>
+        <div class="field">
+          <input type="text" placeholder="TO">
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+                <i class="calendar icon"></i>
+                <input suiDatepicker
+                       name="departure"
+                       [(ngModel)]="departure"
+                       [pickerMode]="mode"
+                       [pickerFirstDayOfWeek]="firstDayOfWeek"
+                       [pickerUseNativeOnMobile]="false"
+                       placeholder="Departure Date">
+            </div>
+        </div>
+
+        <div class="field">
+          <div class="ui left icon input">
+                <i class="calendar icon"></i>
+                <input suiDatepicker
+                       name="arrival"
+                       [(ngModel)]="arrival"
+                       [pickerMode]="mode"
+                       [pickerFirstDayOfWeek]="firstDayOfWeek"
+                       [pickerUseNativeOnMobile]="false"
+                       placeholder="Arrival Date">
+                </div>
+        </div>
+        <button class="huge ui green button">search</button>
+  </div>
+    
+</form>

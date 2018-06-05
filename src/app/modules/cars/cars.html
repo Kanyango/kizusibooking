@@ -1,0 +1,54 @@
+<div class="container-full">
+  <div class="row">
+    <div class="col-md-6 col-sm-12 text-left">
+        <div style="padding-left: 50px; padding-top: 30px;">
+            <h1 class="text-left" style="text-decoration: underline;">Our Cars</h1>
+            <br>
+            <p style="font-size: 20px;">
+              We propose only the latest car models for hiring.
+              <br>
+              Range Rover, Nissan Xtrail, Toyota Prado ,
+              Toyota LandCruiser VX/V8,
+              Toyota Axio/Allion/Premio/Allex/Mark2/Mark X/
+              Raum/Fielder/Wish/Noah.
+
+            </p>
+        </div>
+      
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <img src="/../../../assets/ours.jpg" style="width: 100%; height: 100%;">
+    </div>
+  </div>
+</div>
+<get_car_component></get_car_component>
+<div class="container-full text-center"
+    style="background-color: #FFD600; padding: 40px;">
+  <div class="row">
+    <div class="col-md-12 col-sm-12">
+      <ngx-carousel
+        [inputs]="carouselOne"
+        (carouselLoad)="myfunc($event)">
+          <ngx-item NgxCarouselItem>
+            <h3>"In the aviation industry time is of the essence ,
+              <br />
+              with KIZUSI iam always on time all the time"
+                Joan Sidi</h3>
+                  <h4>Swissport - Lodge Co-ordinator</h4>
+          </ngx-item>
+          <ngx-item NgxCarouselItem>
+            <h3>"Luxury delivered in style, perfect rides for business meetings
+                 <br />
+               , with KIZUSI i arrive in style"</h3>
+               <h4>Kenneth Odinga Adangala</h4>
+                 <h4>Twin Construction Limited - C.E.O</h4>
+          </ngx-item>
+
+          <button NgxCarouselPrev class='leftRs'>&lt;</button>
+          <button NgxCarouselNext class='rightRs'>&gt;</button>
+    </ngx-carousel>
+    </div>
+  </div>
+</div>
+
+<footer-component></footer-component>
