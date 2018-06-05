@@ -86,7 +86,7 @@ import { CarHireComponent } from './modules/modules/cars/car';
   imports: [
     BrowserModule,
     HttpModule,
-    MDBBootstrapModule.forRoot(),
+    //MDBBootstrapModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCsuGIJdVor_CBVRJ7Qffm7iEFJecVAHHk'
     }),
