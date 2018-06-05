@@ -13,6 +13,8 @@
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "^1.6.0",
+    "@angular/compiler-cli": "^5.0.0",
     "@agm/core": "^1.0.0-beta.2",
     "@agm/snazzy-info-window": "^1.0.0-beta.2",
     "@angular/animations": "^5.0.0",
@@ -41,7 +43,9 @@
     "script-loader": "^0.7.2",
     "snazzy-info-window": "^1.1.1",
     "typings": "^2.1.1",
-    "zone.js": "^0.8.14"
+    "zone.js": "^0.8.14",
+    "typings": "^2.1.1",
+    "typescript": "~2.4.2
   },
   "devDependencies": {
     "@angular/cli": "1.6.1",
