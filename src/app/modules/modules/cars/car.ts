@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
 })
 
 export class CarHireComponent {
-
+    
+    firstDayOfWeek: number = 0;
     mode: string = 'date';
     start_data = '';
     end_date = '';
