@@ -4,11 +4,11 @@
         <div class="field">
             <div class="ui left icon input">
                 <i class="car icon"></i>
-                <input type="text" placeholder="Select location, city">
+                <input type="text" placeholder="Select location, city" mdbActive [(ngModel)]="model" name="model">
             </div>
         </div>
         
-        <div class="field">
+        <!--<div class="field">
           <div class="ui left icon input">
                 <i class="calendar icon"></i>
                 <input suiDatepicker
@@ -32,9 +32,28 @@
                        [pickerUseNativeOnMobile]="false"
                        placeholder="Checkout Date">
                 </div>
-        </div>
+        </div> 
+      
         <button class="huge ui green button">
             search
-        </button>
+        </button> -->
   </div>
 </form>
+
+<div class="ui grid container">
+  <div class="three wide column"></div>
+  <div class="eight wide column">
+    
+    <ul class="list-group">
+          <div class="media mb-1" *ngFor="let car of cars| filter:model">
+            <a class="media-left waves-light">
+                <img class="rounded-circle" src="{{car.photo}}" alt="Generic placeholder image">
+            </a>
+            <div class="media-body">
+              <h4 class="media-heading">{{car.model}}</h4>
+                <a [routerLink]="['../car_detail', car._id]"><p style="text-decoration: underline; font-size: 20px;">BOOK NOW</p></a>
+            </div>
+        </div>
+      </li>
+  </div>
+</div>
