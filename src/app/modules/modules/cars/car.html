@@ -47,7 +47,7 @@
     <ul class="list-group">
           <div class="media mb-1" *ngFor="let car of cars| filter:model">
             <a class="media-left waves-light">
-                <img class="rounded-circle" src="{{car.photo}}" alt="Generic placeholder image">
+                <img class="img-thumbnail" src="{{car.photo}}" alt="Generic placeholder image">
             </a>
             <div class="media-body">
               <h4 class="media-heading">{{car.model}}</h4>
