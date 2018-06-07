@@ -17,8 +17,11 @@ export class CarDetailsComponent implements OnInit
     model;
     public rentalForm: FormGroup;
     public car: Car;
-    public carsUrl = 'https://kizusi.herokuapp.com/car/';
-    public reserveUrl = 'https://kizusi.herokuapp.com/reserve/';
+    //public carsUrl = 'https://kizusi.herokuapp.com/car/';
+   // public reserveUrl = 'https://kizusi.herokuapp.com/reserve/';
+    
+     public carsUrl = 'https://kizusiadmin.herokuapp.com/car/';
+    public reserveUrl = 'https://kizusiadmin.herokuapp.com/ressms';
     private headers = new Headers({'Content-Type': 'application/json'});
 
     constructor(private http: Http,
