@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Headers, Http } from '@angular/http';
 import {NgForm} from '@angular/forms';
-import { Car, Price } from './../utilities/car_model';
+import { Car, Price } from '../../utilities/car_model';
 
 import 'rxjs/add/operator/toPromise';
 
