@@ -17,10 +17,7 @@ export class CarDetailsComponent implements OnInit
     model;
     public rentalForm: FormGroup;
     public car: Car;
-    //public carsUrl = 'https://kizusi.herokuapp.com/car/';
-   // public reserveUrl = 'https://kizusi.herokuapp.com/reserve/';
-    
-     public carsUrl = 'https://kizusiadmin.herokuapp.com/car/';
+    public carsUrl = 'https://kizusiadmin.herokuapp.com/car/';
     public reserveUrl = 'https://kizusiadmin.herokuapp.com/ressms';
     private headers = new Headers({'Content-Type': 'application/json'});
 
@@ -79,26 +76,26 @@ export class CarDetailsComponent implements OnInit
 
     onSubmit()
     {
+        console.log(this.rentalForm.value);
+        let ngbDate = this.rentalForm.controls['end'].value;
+        let ngbDate2 = this.rentalForm.controls['start_date'].value;
+        let myDate = new Date(ngbDate.year, ngbDate.month-1, ngbDate.day);
+        let myDate2 = new Date(ngbDate2.year, ngbDate.month-1, ngbDate.day);
+        let formValues = this.rentalForm.value;
+        formValues['car'] = this.car._id;
+        formValues['end'] = myDate;
+        formValues['start_date'] = myDate2;
 
-        // console.log(this.rentalForm.value);
-        // let ngbDate = this.rentalForm.controls['end'].value;
-        // let ngbDate2 = this.rentalForm.controls['start_date'].value;
-        // let myDate = new Date(ngbDate.year, ngbDate.month-1, ngbDate.day);
-        // let myDate2 = new Date(ngbDate2.year, ngbDate.month-1, ngbDate.day);
-        // let formValues = this.rentalForm.value;
-        // formValues['end'] = myDate;
-        // formValues['start_date'] = myDate2;
-        //
-        // this.http.post(this.reserveUrl, formValues, {headers: this.headers})
-        //     .toPromise()
-        //     .then(res => {
-        //                 console.log(res.json());
-        //                 this.router.navigate(['../payments']);
-        //
-        //      })
-        //     .catch(this.handleError)
-            console.log(this.car);
-            this.router.navigate(['../payments/', this.car._id]);
+        this.http.post(this.reserveUrl, formValues, {headers: this.headers})
+            .toPromise()
+            .then(res => {
+                        console.log(res.json());
+                        this.router.navigate(['../payments/', this.car._id]);
+
+             })
+            .catch(this.handleError)
+
+
 
     }
 
