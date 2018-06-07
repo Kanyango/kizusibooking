@@ -20,7 +20,7 @@ import { HotelBookingComponent } from './modules/modules/hotels/hotel';
 import { CarHireComponent } from './modules/modules/cars/car';
 
 const routes: Routes = [
-        { path: '', redirectTo: 'home', pathMatch: 'full'},
+        { path: '', redirectTo: 'plan', pathMatch: 'full'},
         { path: 'home', component: HomeComponent},
         { path: 'about', component: AboutComponent},
         { path: 'services', component: ServicesComponent},
